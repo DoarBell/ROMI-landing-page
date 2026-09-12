@@ -1,0 +1,46 @@
+:root{
+  --romi-cream: #fdf6ec;
+  --romi-ink: #252238;
+  --romi-pink-soft: #ffe1ed;
+  --romi-lilac-soft: #ebe5ff;
+  --romi-mint-soft: #d9f5e8;
+  --romi-navy: var(--romi-ink);
+  --foreground: var(--romi-navy);
+  --page-bg: var(--romi-cream);
+  --text-primary: var(--romi-navy);
+}
+
+.dark-theme{
+  --romi-ink: #181522;
+  --romi-pink-soft: #4a2e3d;
+  --romi-lilac-soft: #39324e;
+  --romi-mint-soft: #293f3a;
+  --foreground: #fff8ee;
+  --page-bg: #211d2b;
+  --text-primary: #fff8ee;
+}
+
+.nav{
+    background-color: var(--romi-navy);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+}
