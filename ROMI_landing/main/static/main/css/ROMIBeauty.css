@@ -41,6 +41,107 @@
     color: white !important;
 }
 
+.romi-footer {
+  background-color: #252238;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 -5px 0 #ffd972; /* yellow accent line */
+}
+
+/* Titles */
+.footer-title {
+  font-family: "Fredoka One", cursive;
+  color: #ff9f88; /* accent */
+  font-size: 1.1rem;
+}
+
+/* Text */
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.footer-muted {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Links */
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #f05f73; /* primary */
+}
+
+/* Social buttons */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background-color: #f05f73;
+  color: #fff;
+  transform: scale(1.08);
+  border-color: transparent;
+}
+
+/* Outline buttons (legal) */
+.romi-footer .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: 500;
+}
+
+.romi-footer .btn-outline-light:hover {
+  background-color: #f05f73;
+  border-color: #f05f73;
+  color: #fff;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Primary color for icons */
+.romi-footer .text-primary {
+  color: #f05f73 !important;
+}
+
+/* EKG marching animation at the bottom */
+@keyframes ekg-march {
+  0%   { transform: translateX(0px); }
+  100% { transform: translateX(-400px); }
+}
+
+/* Utility that the footer uses */
+.bg-\[var\(--footer-bg\)\] {
+  background-color: var(--footer-bg);
+}
+
+.theHolder {
+    position: relative;
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    height: 100%;
+    width: 100%;            
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -58,20 +159,11 @@ html{
     scroll-behavior: smooth;
 }
 
-#inicio{
+section{
     height: 90dvh;
     width: 100dvw;
     border: 10px solid var(--romi-pink-soft);
     overflow: hidden;
-}
-
-.theHolder {
-    position: relative;
-    display: flex;
-    justify-content: center;  
-    align-items: center;     
-    height: 100%;
-    width: 100%;            
 }
 
 #banner-img {
