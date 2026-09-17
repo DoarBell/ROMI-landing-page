@@ -55,6 +55,11 @@
                 </div>
             </div>
         </nav>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
         <section id="inicio">
             <div class="text-box">
                 <h1 class="big-text" class="display-4">
@@ -70,24 +75,45 @@
                 </div>
             </div>
         </section>
+
         <section id="app">
-            <div class="row">
-                <div class="col">
-                    <img id="talking" src="{% static 'main/images/explanation.png' %}" alt="">
+            <div class="row align-items-center">
+                <div class="fade-in col d-flex flex-column align-items-center">
+                    <img id="talking" class="" src="{% static 'main/images/explanation.png' %}" alt="">
                     <div id="romi-talk" class="text-box">
-                        <h1 class="big-text">
-                            Habla con ROMI
-                        </h1>
+                        <h1 class="big-text">Habla con ROMI</h1>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="text-box">
-                        <h1>hola</h1>
-                        <img src="{% static 'main/images/chat.png' %}" alt="">
+                <div class="fade-in col d-flex flex-column align-items-center">
+                    <div id="show-chat" class="text-box">
+                        <h1 class="big-text">ROMI tiene registros medicos que pueden ayudar a diagnosticar si tus sintomas consuerdan con alguna enferedad peligrosa.</h1>
+                        <img id="romi-chat" src="{% static 'main/images/chat.png' %}" alt="">
                     </div>
                 </div>
             </div>
+
+            <div class="row align-items-center">
+                <div class="col d-flex flex-column align-items-center">
+                    <div class="text-box">
+                        <h1 class="big-text">ROMI tiene registros medicos que pueden ayudar a diagnosticar si tus sintomas consuerdan con alguna enferedad peligrosa.</h1>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <img id="talking" class="" src="{% static 'main/images/Profesor_ROMI.png' %}" alt="">
+                    <div id="romi-talk" class="text-box">
+                        <h1 class="big-text">ROMI evalua tu nivel de salud</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div>
+                    <img src="{% static 'main/images/smart.png' %}" alt="">
+                </div>
+                <div></div>                
+            </div>
         </section>
+
         <section id="pricing">
             <div class="row">
                 <div class="col">

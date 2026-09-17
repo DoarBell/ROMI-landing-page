@@ -7,6 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     themeBtn.addEventListener("click", () => {
         toggleTheme();
     })
+    
+    const items = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // If you only want it once:
+            observer.unobserve(entry.target);
+        }
+        });
+    }, { threshold: 0.2 }); // 20% visible triggers
+
+    items.forEach(item => observer.observe(item));
 })
 
 let currentIndex = 0;

@@ -42,6 +42,47 @@
   --text-primary: #fff8ee;
 }
 
+.cube {
+  position: absolute;
+  z-index: 0;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #e81aff;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 5s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #3affad ;
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 3s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 2s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 1s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 2s;
+  left: 50vw;
+  top: 10vh;
+}
+
 .nav-link{
     cursor: pointer;
 }
@@ -134,6 +175,19 @@
   background-color: var(--footer-bg);
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.5s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -191,15 +245,17 @@ section{
 }
 
 .text-box{
-    display: flex;
     position: relative;
-    z-index: 2;
     width: fit-content;
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+    overflow-wrap: break-word;
     border-radius: 15px;
     margin-top: 20px;
     padding: 20px;
     color: #333;
-    background: radial-gradient(#ffd972, var(--romi-pink-soft));
+    background: radial-gradient(#f6db92, var(--romi-pink-soft));
     box-shadow: rgba(41, 41, 41, 0.4) 5px 5px, rgba(99, 99, 99, 0.3) 10px 10px, rgba(88, 88, 88, 0.2) 15px 15px, rgba(99, 99, 99, 0.1) 20px 20px, rgba(88, 88, 88, 0.05) 25px 25px;
     border: 2px solid var(--foreground);
 }
@@ -213,12 +269,9 @@ section{
 .phone-buttons{
     position: absolute;
     z-index: 5;
-    
     left: calc(14.5% + 200px);
-    
-    top: calc(8.2% + 77.4% + 12px);   /* top + height + small gap */
-    
-    width: 18.1%;                      /* same width as the phone screen */
+    top: calc(8.2% + 77.4% + 12px);
+    width: 18.1%;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -238,6 +291,13 @@ section{
     background-color: var(--romi-coral-hover);
     border: 0;
 }
+
+#romi-chat{
+    padding-top: 20px;
+    border-radius: 5%;
+    height: 80%;
+}
+
 
 
 #phone-img{
@@ -260,11 +320,29 @@ section{
 }
 
 #romi-talk{
+  position: static;
   margin-top: 0;
+  display: block;
+}
+
+#show-chat{
+  height: 800px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
   #phone-img{
     border-radius: 25px;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
   }
 }
