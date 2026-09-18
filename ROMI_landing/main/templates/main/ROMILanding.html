@@ -13,14 +13,14 @@
         <script src="{% static 'main/js/ROMILogic.js' %}"></script>
         <script>
             const phoneImages = [
-                "{% static 'main/images/main.png' %}",
-                "{% static 'main/images/info.png' %}",
-                "{% static 'main/images/chat.png' %}",
-                "{% static 'main/images/more.png' %}",
+                "{% static 'main/images/main_transparent.png' %}",
+                "{% static 'main/images/info_transparent.png' %}",
+                "{% static 'main/images/chat_transparent.png' %}",
+                "{% static 'main/images/more_transparent.png' %}",
             ];
         </script>
     </head>
-    <body id="gradient-bg main-body">
+    <body id="main-body">
         <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
             <div class="container container-fluid">
                 <img src="{% static 'main/images/ROMI_logo.jpg' %}" alt="img">
@@ -28,20 +28,17 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="location.href='#inicio'">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="location.href='#app'">App</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="location.href='#pricing'">Precios</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" onclick="location.href='#background'">Background</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='#inicio'">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='#app'">App</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='#pricing'">Precios</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="navbar-nav ms-auto">
                     <button id="theme-btn" class="btn rounded-circle theme">
@@ -55,12 +52,16 @@
                 </div>
             </div>
         </nav>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <section id="inicio">
+
+        <section id="inicio" class="this-is-romi">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
             <div class="text-box">
                 <h1 class="big-text" class="display-4">
                     Te presentamos ROMI preventivo<br>tu asistente medico virtual.
@@ -68,7 +69,7 @@
             </div>
             <div class="phone-hold">
                 <img id="banner-img" src="{% static 'main/images/ROMI_banner.png' %}" alt="error">
-                <img id="phone-img" src="{% static 'main/images/main.png' %}" alt="error">
+                <img id="phone-img" src="{% static 'main/images/main_transparent.png' %}" alt="error">
                 <div class="phone-buttons" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-primary" onclick="phoneScroll(-1)"><</button>
                     <button type="button" class="btn btn-primary" onclick="phoneScroll(1)">></button>
@@ -78,55 +79,91 @@
 
         <section id="app">
             <div class="row align-items-center">
-                <div class="fade-in col d-flex flex-column align-items-center">
-                    <img id="talking" class="" src="{% static 'main/images/explanation.png' %}" alt="">
-                    <div id="romi-talk" class="text-box">
-                        <h1 class="big-text">Habla con ROMI</h1>
-                    </div>
-                </div>
-                <div class="fade-in col d-flex flex-column align-items-center">
-                    <div id="show-chat" class="text-box">
-                        <h1 class="big-text">ROMI tiene registros medicos que pueden ayudar a diagnosticar si tus sintomas consuerdan con alguna enferedad peligrosa.</h1>
-                        <img id="romi-chat" src="{% static 'main/images/chat.png' %}" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
                 <div class="col d-flex flex-column align-items-center">
-                    <div class="text-box">
-                        <h1 class="big-text">ROMI tiene registros medicos que pueden ayudar a diagnosticar si tus sintomas consuerdan con alguna enferedad peligrosa.</h1>
+                    <div class="fade-in text-box">
+                        <h1 class="big-text">ROMI evalua tu nivel de salud en niveles que puedes interpretar de forma sencilla</h1>
                     </div>
                 </div>
                 <div class="col d-flex flex-column align-items-center">
                     <img id="talking" class="" src="{% static 'main/images/Profesor_ROMI.png' %}" alt="">
-                    <div id="romi-talk" class="text-box">
-                        <h1 class="big-text">ROMI evalua tu nivel de salud</h1>
+                </div>
+            </div>
+            <div class="container fade-in">
+                <div class="row">
+                    <div class="col">
+                        <div class="img-frame">
+                            <div class="text-box"><h1 class="big-text">Expediente</h1></div>
+                            <img class="img-correction" src="{% static 'main/images/info_transparent.png' %}" alt="">
+                        </div>
+                        <div class="text-box"><p>ROMI guarda un expediente medico para tener en cuenta enferemedades derivadas de tus familiares</p></div>
+                    </div>
+                    <div class="col">
+                        <div class="img-frame">
+                            <div class="text-box"><h1 class="big-text">Estadisticas</h1></div>
+                            <img class="img-correction" src="{% static 'main/images/more_transparent.png' %}" alt="">
+                        </div>
+                        <div class="text-box"><p>Ten acceso directo y rapido a tu estado medico actual</p></div>
+                    </div>
+                    <div class="col">
+                        <div class="img-frame">
+                            <div class="text-box"><h1 class="big-text">Nivel de salud</h1></div>
+                            <img class="img-correction" src="{% static 'main/images/main_transparent.png' %}" alt="">
+                        </div>
+                        <div class="text-box"><p>Tu nivel de salud muestra que tan saludable eres en general</p></div>
                     </div>
                 </div>
             </div>
-
-            <div class="container">
-                <div>
-                    <img src="{% static 'main/images/smart.png' %}" alt="">
+            <div class="this-is-romi space">
+                <div class="container row align-items-center">
+                    <div class="fade-in col d-flex flex-column align-items-center">
+                        <img id="talking" src="{% static 'main/images/explanation.png' %}" alt="">
+                        <div id="romi-talk" class="text-box">
+                            <h1 class="big-text">Habla con ROMI</h1>
+                        </div>
+                    </div>
+                    <div class="fade-in col d-flex flex-column align-items-center">
+                        <div id="show-chat">
+                            <div class="text-box">
+                                <p>ROMI tiene registros medicos que pueden ayudar a diagnosticar si tus sintomas consuerdan con alguna enfermedad peligrosa.</p>
+                            </div>
+                            <img id="romi-chat" src="{% static 'main/images/chat_transparent.png' %}" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div></div>                
+            </div>
+            <div class="container fade-in space" style="height: auto; margin: 30px;">
+                <div class="text-box">
+                    <h1 class="big-text">Conectividad con smart watch</h1>
+                </div>
+                <img src="{% static 'main/images/smart.png' %}" alt="">
+                <p>ROMI puede ejecutar analisis de salud de forma mas precisa al conectar con cualquer smart watch, ademas de poder mandar alertas de forma directa hacia o desde la app</p>                
             </div>
         </section>
 
-        <section id="pricing">
-            <div class="row">
-                <div class="col">
-                    hola
+        <section id="pricing" class="space fade-in">
+            <div class="row container">
+                <h1 class="text-box">Conoce nuestros planes</h1>
+            </div>
+            <div class="row container">
+                <div class="col d-flex flex-column align-items-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'main/images/poor.png' %}" class="card-img-top" alt="imagen de los planes aqui">
+                        <div class="card-body">
+                            <p class="card-text text-box">PLAN BASICO</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    aloh
+                <div class="col d-flex flex-column align-items-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'main/images/less_poor.png' %}" class="card-img-top" alt="imagen de los planes aqui">
+                        <div class="card-body">
+                            <p class="text-box">PLAN PRO</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="background">
-            personas detras de romi:
-        </section>
+
         <footer class="romi-footer text-white">
             <div class="container py-5">
                 <div class="row g-4 g-lg-5">
