@@ -97,6 +97,10 @@ body{
     animation: gradient 10s ease infinite;
 }
 
+svg{
+  color: var(--text-primary);
+}
+
 .navbar{
   --bs-navbar-color: var(--text-primary);
   --bs-nav-link-color: var(--romi-cream);
